@@ -1,7 +1,7 @@
 FROM rocker/r-base
 
 ## Install some external dependencies. 360 MB
-RUN apt-get update \
+RUN apt-get update && apt-get upgrade \
   && apt-get install -y --no-install-recommends \
     build-essential \
     libcairo2-dev/unstable \
