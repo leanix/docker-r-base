@@ -1,7 +1,7 @@
 FROM rocker/r-base
 
 ## Install some external dependencies. 360 MB
-RUN apt-get update && apt-get upgrade -y \
+RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential \
     libcairo2-dev/unstable \
@@ -15,6 +15,7 @@ RUN apt-get update && apt-get upgrade -y \
     libxslt1-dev \
     libxt-dev \
     libmysqlclient-dev \
+    krb5-multidev \
     vim \
     openjdk-7-jdk \
   && apt-get clean \
